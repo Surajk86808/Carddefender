@@ -1,0 +1,501 @@
+.prediction-container {
+    min-height: calc(100vh - 70px);
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+.prediction-content {
+    max-width: 1400px;
+    width: 100%;
+    background: rgba(20, 20, 30, 0.85);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 0 30px rgba(132, 0, 255, 0.6);
+    backdrop-filter: blur(10px);
+    animation: fadeInUp 1s ease-out;
+}
+
+.prediction-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    background: transparent;
+}
+
+.prediction-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(132, 0, 255, 0.8);
+    animation: glow 2s ease-in-out infinite alternate;
+    background: transparent;
+}
+
+.prediction-subtitle {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    background: transparent;
+    line-height: 1.5;
+}
+
+.prediction-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    background: transparent;
+}
+
+.form-wrapper {
+    background: rgba(30, 30, 50, 0.6);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid rgba(132, 0, 255, 0.3);
+}
+
+.transaction-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: transparent;
+}
+
+.form-section {
+    padding: 1.5rem;
+    border: 1px solid rgba(132, 0, 255, 0.4);
+    border-radius: 15px;
+    background: rgba(40, 40, 60, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(132, 0, 255, 0.3);
+}
+
+.form-section h3 {
+    color: #a855f7;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    background: transparent;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid rgba(132, 0, 255, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    outline: none;
+    font-size: 0.95rem;
+    transition: border 0.3s, box-shadow 0.3s, background 0.3s;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border: 1px solid rgba(132, 0, 255, 0.8);
+    box-shadow: 0 0 10px rgba(132, 0, 255, 0.4);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+select option {
+    background: #1a1a2e;
+    color: white;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+    grid-column: 1 / -1;
+}
+
+.predict-btn {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #8400ff, #ff00ff);
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.predict-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #ff00ff, #8400ff);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(132, 0, 255, 0.4);
+}
+
+.predict-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.prediction-results {
+    background: rgba(30, 30, 50, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid rgba(132, 0, 255, 0.3);
+    margin-top: 1rem;
+}
+
+.prediction-results h3 {
+    color: #a855f7;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    background: transparent;
+    text-align: center;
+}
+
+.result-card {
+    background: rgba(50, 50, 70, 0.8);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.risk-score {
+    margin-bottom: 1.5rem;
+    background: transparent;
+}
+
+.score-value {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    background: transparent;
+    text-shadow: 0 0 15px rgba(132, 0, 255, 0.8);
+}
+
+.score-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    background: transparent;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.risk-status {
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.risk-status.low-risk {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: white;
+}
+
+.risk-status.medium-risk {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: white;
+}
+
+.risk-status.high-risk {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+}
+
+.recommendation {
+    background: rgba(132, 0, 255, 0.1);
+    border: 1px solid rgba(132, 0, 255, 0.3);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
+}
+
+.recommendation strong {
+    color: #a855f7;
+    background: transparent;
+}
+
+.confidence-meter {
+    background: transparent;
+}
+
+.meter-label {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin-bottom: 0.5rem;
+    background: transparent;
+}
+
+.meter-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.meter-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px rgba(132, 0, 255, 0.8);
+    }
+    to {
+        text-shadow: 0 0 30px rgba(132, 0, 255, 1), 0 0 40px rgba(132, 0, 255, 0.8);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeSlideUp 0.8s forwards;
+}
+
+.fade-in.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.fade-in.delay-2 {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media screen and (min-width: 1200px) {
+    .prediction-layout {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+    
+    .prediction-results {
+        margin-top: 0;
+        position: sticky;
+        top: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .prediction-container {
+        padding: 1rem 0.5rem;
+        min-height: calc(100vh - 60px);
+    }
+    
+    .prediction-content {
+        padding: 1.5rem;
+        border-radius: 15px;
+    }
+    
+    .prediction-title {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .prediction-subtitle {
+        font-size: 1rem;
+    }
+    
+    .prediction-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-wrapper {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .form-section {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+    
+    .form-section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .input-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+    
+    input, select, textarea {
+        padding: 0.8rem;
+        font-size: 16px; /* Prevents zoom on iOS */
+        border-radius: 6px;
+    }
+    
+    .predict-btn {
+        padding: 1rem;
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+    
+    .prediction-results {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .result-card {
+        padding: 1.5rem;
+    }
+    
+    .score-value {
+        font-size: 2.5rem;
+    }
+    
+    .risk-status {
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .prediction-container {
+        padding: 0.5rem;
+    }
+    
+    .prediction-content {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+    
+    .prediction-title {
+        font-size: 1.8rem;
+    }
+    
+    .prediction-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .form-wrapper {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    
+    .form-section {
+        padding: 0.8rem;
+        border-radius: 10px;
+    }
+    
+    .form-section h3 {
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    input, select, textarea {
+        padding: 0.7rem;
+        font-size: 16px;
+    }
+    
+    .predict-btn {
+        padding: 0.9rem;
+        font-size: 0.95rem;
+    }
+    
+    .prediction-results {
+        padding: 1rem;
+    }
+    
+    .result-card {
+        padding: 1rem;
+    }
+    
+    .score-value {
+        font-size: 2rem;
+    }
+    
+    .risk-status {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Large screens */
+@media screen and (min-width: 1400px) {
+    .prediction-content {
+        padding: 3rem;
+    }
+    
+    .prediction-title {
+        font-size: 3.2rem;
+    }
+    
+    .prediction-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .form-wrapper {
+        padding: 2.5rem;
+    }
+    
+    .form-section {
+        padding: 2rem;
+    }
+}

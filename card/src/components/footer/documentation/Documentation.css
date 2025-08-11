@@ -1,0 +1,123 @@
+/* Container styles */
+.documentation-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #2c3e50;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+}
+
+/* Main title */
+.documentation-container h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Section styles */
+.doc-section {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.doc-section h2 {
+    font-size: 1.8rem;
+    color: #2980b9;
+    margin-bottom: 15px;
+    border-left: 5px solid #2980b9;
+    padding-left: 10px;
+}
+
+/* Paragraph styles */
+.doc-section p {
+    font-size: 1.1rem;
+    color: #34495e;
+}
+
+/* List styles for tech stack and documentation sections */
+.doc-section ul {
+    list-style: disc inside;
+    margin-left: 15px;
+    color: #34495e;
+}
+
+.doc-section ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* The doc-list for main doc navigation */
+.doc-list {
+    margin-top: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.doc-list li {
+    background: #ecf0f1;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    font-size: 1.15rem;
+    cursor: default;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.doc-list li:hover {
+    background-color: #d0d7de;
+}
+
+/* Links inside paragraph */
+.doc-section a {
+    color: #2980b9;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.doc-section a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .documentation-container {
+        padding: 20px 25px;
+        margin: 20px auto;
+    }
+
+    .documentation-container h1 {
+        font-size: 2.4rem;
+    }
+
+    .doc-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .doc-section p,
+    .doc-section ul li,
+    .doc-list li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .documentation-container {
+        padding: 15px 15px;
+        margin: 15px auto;
+    }
+
+    .documentation-container h1 {
+        font-size: 2rem;
+    }
+
+    .doc-section h2 {
+        font-size: 1.3rem;
+    }
+}

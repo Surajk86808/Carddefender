@@ -1,0 +1,285 @@
+.about-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    /* background: linear-gradient(135deg, rgba(10, 10, 15) 0%, rgba(20, 20, 30, 0.8) 100%); */
+    background-color: rgb(13,13,13);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.about-content {
+    max-width: 1200px;
+    width: 100%;
+    background: rgba(20, 20, 30,);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.4), 0 0 60px rgba(168, 85, 247, 0.2);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    animation: fadeInUp 1s ease-out;
+    position: relative;
+    z-index: 10;
+}
+
+.about-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.about-text {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+    background: transparent;
+}
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.analytics-card {
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.analytics-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(168, 85, 247, 0.4);
+}
+
+.analytics-card h3 {
+    font-size: 1.3rem;
+    color: #a855f7;
+    margin-bottom: 1.5rem;
+    background: transparent;
+}
+
+.metric {
+    margin-bottom: 1.5rem;
+    background: transparent;
+}
+
+.metric-value {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    background: transparent;
+    text-shadow: 0 0 15px rgba(168, 85, 247, 0.8);
+}
+
+.metric-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    background: transparent;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.analytics-card p {
+    color: #b0b0b0;
+    background: transparent;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
+    }
+    to {
+        text-shadow: 0 0 30px rgba(168, 85, 247, 1), 0 0 40px rgba(168, 85, 247, 0.8);
+    }
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .about-container {
+        padding: 15px;
+        min-height: calc(100vh - 60px);
+    }
+    
+    .about-content {
+        padding: 2rem;
+        border-radius: 15px;
+    }
+    
+    .about-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+    }
+    
+    .analytics-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .analytics-card {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .analytics-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .metric-value {
+        font-size: 2rem;
+    }
+    
+    .metric-label {
+        font-size: 0.8rem;
+    }
+    
+    .analytics-card p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablet Responsive Styles */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .about-content {
+        padding: 2.5rem;
+    }
+    
+    .about-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-text p {
+        font-size: 1.1rem;
+    }
+    
+    .analytics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.8rem;
+    }
+    
+    .analytics-card {
+        padding: 1.8rem;
+    }
+}
+
+/* p{
+    size: 20px;
+} */
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    .about-container {
+        padding: 10px;
+    }
+    
+    .about-content {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .about-title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .about-text {
+        margin-bottom: 2rem;
+    }
+    
+    .about-text p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .analytics-grid {
+        gap: 1rem;
+    }
+    
+    .analytics-card {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    
+    .analytics-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .metric-value {
+        font-size: 1.8rem;
+    }
+    
+    .metric-label {
+        font-size: 0.75rem;
+    }
+    
+    .analytics-card p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Large screens */
+@media screen and (min-width: 1200px) {
+    .about-content {
+        padding: 4rem;
+    }
+    
+    .about-title {
+        font-size: 3.5rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .about-text p {
+        font-size: 1.3rem;
+    }
+    
+    .analytics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+    
+    .analytics-card {
+        padding: 2.5rem;
+    }
+    
+    .metric-value {
+        font-size: 3rem;
+    }
+}

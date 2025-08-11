@@ -1,0 +1,404 @@
+.contact-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.contact-content {
+    max-width: 1200px;
+    width: 100%;
+    background: rgba(20, 20, 30);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.4), 0 0 60px rgba(34, 197, 94, 0.2);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    animation: fadeInUp 1s ease-out;
+    position: relative;
+    z-index: 10;
+    background-color: rgb(13, 13, 13);
+}
+
+.contact-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 20px rgba(34, 197, 94);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.contact-text {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-text p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+    background: transparent;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-card {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 15px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
+}
+
+.contact-card h3 {
+    font-size: 1.3rem;
+    color: #22c55e;
+    margin-bottom: 1rem;
+    background: transparent;
+}
+
+.contact-card p {
+    color: #b0b0b0;
+    background: transparent;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    background: transparent;
+}
+
+.contact-info span {
+    color: #e0e0e0;
+    background: transparent;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.contact-info span:last-child {
+    border-bottom: none;
+}
+
+.review-form {
+    background: rgba(34, 197, 94, 0.05);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.review-form h3 {
+    color: #22c55e;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    background: transparent;
+    font-size: 1.4rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: transparent;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    background: transparent;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    outline: none;
+    font-size: 0.95rem;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border: 1px solid rgba(34, 197, 94, 0.8);
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+}
+
+.contact-form select option {
+    background: #1a1a1a;
+    color: white;
+}
+
+.submit-btn {
+    padding: 1rem;
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(90deg, #16a34a, #22c55e);
+    transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px rgba(34, 197, 94, 0.8);
+    }
+    to {
+        text-shadow: 0 0 30px rgba(34, 197, 94, 1), 0 0 40px rgba(34, 197, 94, 0.8);
+    }
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .contact-container {
+        padding: 15px;
+        min-height: calc(100vh - 60px);
+    }
+    
+    .contact-content {
+        padding: 2rem;
+        border-radius: 15px;
+    }
+    
+    .contact-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .contact-text p {
+        font-size: 1rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-card {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .contact-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .contact-card p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-info span {
+        font-size: 0.85rem;
+        padding: 0.4rem 0;
+    }
+    
+    .review-form {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .review-form h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        padding: 0.8rem;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .submit-btn {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Tablet Responsive Styles */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .contact-content {
+        padding: 2.5rem;
+    }
+    
+    .contact-title {
+        font-size: 2.5rem;
+    }
+    
+    .contact-text p {
+        font-size: 1.1rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.8rem;
+    }
+    
+    .contact-card {
+        padding: 1.8rem;
+    }
+}
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    .contact-container {
+        padding: 10px;
+    }
+    
+    .contact-content {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .contact-title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-text {
+        margin-bottom: 2rem;
+    }
+    
+    .contact-text p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+    
+    .contact-grid {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .contact-card {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    
+    .contact-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .contact-card p {
+        font-size: 0.85rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .contact-info span {
+        font-size: 0.8rem;
+        padding: 0.3rem 0;
+    }
+    
+    .review-form {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    
+    .review-form h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .contact-form {
+        gap: 1rem;
+    }
+    
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        padding: 0.7rem;
+        font-size: 16px;
+    }
+    
+    .submit-btn {
+        padding: 0.9rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Large screens */
+@media screen and (min-width: 1200px) {
+    .contact-content {
+        padding: 4rem;
+    }
+    
+    .contact-title {
+        font-size: 3.5rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .contact-text p {
+        font-size: 1.3rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+        margin-bottom: 3.5rem;
+    }
+    
+    .contact-card {
+        padding: 2.5rem;
+    }
+    
+    .review-form {
+        padding: 2.5rem;
+    }
+    
+    .review-form h3 {
+        font-size: 1.5rem;
+    }
+}

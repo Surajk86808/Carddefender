@@ -1,0 +1,38 @@
+/* 
+	Installed from https://reactbits.dev/default/
+*/
+
+#lights {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#lights canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Responsive adjustments for canvas */
+@media screen and (max-width: 768px) {
+  #lights {
+    /* Reduce performance on mobile for better battery life */
+    opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #lights {
+    /* Further reduce on small screens */
+    opacity: 0.6;
+  }
+} 

@@ -1,0 +1,26 @@
+.page-container {
+    background-color: rgb(13,13,13);
+    color: white;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.page-container h1 {
+    color: #1e90ff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.page-container p {
+    font-size: 1.2rem;
+    color: #ccc;
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+.page-container img {
+    margin-top: 30px;
+    max-width: 90%;
+    border: 2px solid #1e90ff;
+    border-radius: 8px;
+}
