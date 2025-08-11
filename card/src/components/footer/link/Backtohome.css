@@ -1,0 +1,71 @@
+/* Backtohome.css */
+.back-link {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    text-align: left;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: rgb(30, 144, 255);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.back-button:hover {
+    background-color: #005fcc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .back-link {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    
+    .back-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-link {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .back-button {
+        padding: 12px 24px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .back-link {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    
+    .back-button {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    .back-button:hover {
+        background-color: rgb(30, 144, 255);
+    }
+    
+    .back-button:active {
+        background-color: #005fcc;
+    }
+}

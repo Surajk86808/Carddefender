@@ -1,38 +1,58 @@
-/* src/Pages/Error.css */
+/* Error Page Container */
 
 .error-container {
-    height: 70vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background: transparent;
     position: relative;
     z-index: 10;
-    font-size: 3rem;
+    font-size: clamp(2rem, 2vw, 2rem);
     color: #bb86fc;
     text-align: center;
-    user-select: none;
-    filter: drop-shadow(0 0 8px #bb86fc);
+    font-weight: 300;
+    filter: drop-shadow(0 0 12px #bb86fc);
+    padding: 0 20px;
+
 }
 
+/* Back Link Wrapper */
 .back-link {
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
+/* Back Link Anchor */
 .back-link a {
+    display: inline-block;
     text-decoration: none;
     font-size: 1.25rem;
     color: #bb86fc;
     border: 2px solid #bb86fc;
-    padding: 0.5rem 1.5rem;
-    border-radius: 25px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    user-select: none;
+    padding: 0.6rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease,
+        box-shadow 0.35s ease,
+        transform 0.2s ease;
+    cursor: pointer;
 }
 
-.back-link a:hover {
-    background-color: #bb86fc;
+/* Hover + Focus State */
+.back-link a:hover,
+.back-link a:focus {
+    background-color: rgb(13,13,13);
     color: #1f1f3f;
-    box-shadow: 0 0 12px #bb86fc;
+    box-shadow: 0 0 20px #bb86fc;
+    transform: scale(1.05);
+    outline: none;
+}
+
+/* Focus visible for accessibility */
+.back-link a:focus-visible {
+    outline: 2px solid #bb86fc;
+    outline-offset: 3px;
 }

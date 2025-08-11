@@ -1,5 +1,6 @@
 import React from "react";
 import "./NewsPress.css";
+import Backtohome from "../link/Backtohome";
 
 const NewsPress = () => {
   return (
@@ -39,6 +40,7 @@ const NewsPress = () => {
           <span>January 5, 2025</span>
         </div>
       </div>
+      <Backtohome />
     </div>
   );
 };

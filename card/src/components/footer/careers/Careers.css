@@ -24,7 +24,7 @@
 }
 
 .job-listings {
-    background-color: #111;
+    background-color: rgba(13, 13, 13, 0.8);
     padding: 20px;
     border: 1px solid #1e90ff;
     border-radius: 8px;
@@ -49,7 +49,8 @@
 
 .careers-image {
     margin-top: 30px;
-    max-width: 90%;
+    max-width: 40%;
+    height: 200px ;
     border: 2px solid #1e90ff;
     border-radius: 8px;
 }
@@ -69,6 +70,7 @@
     text-decoration: underline;
 }
 
+ 
 /* Responsive */
 @media (max-width: 768px) {
     .careers-container {

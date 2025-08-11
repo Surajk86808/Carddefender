@@ -1,5 +1,6 @@
 import React from "react";
 import "./Documentation.css";
+import Backtohome from "../link/Backtohome";
 
 const Documentation = () => {
   return (
@@ -66,6 +67,7 @@ const Documentation = () => {
           <li>💡 Best Practices – Recommendations for maintaining and extending the system.</li>
         </ul>
       </section>
+      <Backtohome />
     </div>
   );
 };

@@ -8,9 +8,9 @@ import WorkingHyperspeed from '../components/Hyperspeed/WorkingHyperspeed';
 const ErrorPage = () => {
   return (
     <div style={{ position: 'relative', minHeight: '100vh' }}>
-      <WorkingHyperspeed />
+       
       <div className="error-container">
-        <FuzzyText>
+      <FuzzyText>
           404 - Page Not Found
       </FuzzyText>
       </div>

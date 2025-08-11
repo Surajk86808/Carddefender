@@ -1,5 +1,6 @@
 import React from "react";
 import "./Careers.css";
+import Backtohome from "../link/Backtohome";
 
 const Careers = () => {
   return (
@@ -25,10 +26,11 @@ const Careers = () => {
           <li>🔹 UI/UX Designer</li>
           <li>🔹 Data Analyst</li>
         </ul>
+        
       </div>
 
       <img
-        src="/images/careers-team.png"
+        src="/carddefender.png"
         alt="CardDefender Careers"
         className="careers-image"
       />
@@ -36,7 +38,13 @@ const Careers = () => {
       <p className="apply-note">
         Interested? Send your resume to{" "}
         <a href="mailto:careers@carddefender.com">careers@carddefender.com</a>
+        
       </p>
+
+      <div className="careers-footer">
+        <Backtohome /> 
+      </div>
+      
     </div>
   );
 };

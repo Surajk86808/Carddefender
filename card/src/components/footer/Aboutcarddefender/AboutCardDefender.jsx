@@ -1,10 +1,13 @@
 import React from "react";
 import "./AboutCardDefender.css";
+import Backtohome from "../link/Backtohome";
 
 const AboutCardDefender = () => {
   return (
     <div className="about-container">
+      
       <div className="about-content">
+        
         <h1>About CardDefender</h1>
         <p>
           CardDefender is a cutting-edge ML-powered fraud detection system 
@@ -17,8 +20,10 @@ const AboutCardDefender = () => {
           protection, CardDefender detects suspicious patterns instantly, 
           minimizing financial risks while keeping the user experience smooth.
         </p>
-        <img src="/images/about-carddefender.png" alt="About CardDefender" />
+        <img src="../../../../public/carddefender.png" alt="About CardDefender" />
+         <Backtohome />
       </div>
+      
     </div>
   );
 };

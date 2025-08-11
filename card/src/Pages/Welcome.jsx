@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import './Welcome.css'
-import Hyperspeed from '../components/Hyperspeed/Hyperspeed'
 import WorkingHyperspeed from '../components/Hyperspeed/WorkingHyperspeed'
 
 const Welcome = () => {
@@ -31,7 +30,7 @@ const Welcome = () => {
       <div className="welcome-content">
         <h1 className="welcome-title">Welcome to Card Defender</h1>
         <p className="welcome-subtitle">
-          Advanced AI-powered fraud detection system
+          Advanced Ml-powered Credit card fraud detection system
         </p>
       </div>
     </div>

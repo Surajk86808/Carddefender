@@ -16,7 +16,11 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <Link to="/" className="nav-logo" onClick={closeMenu}>
-        <div className="nav-left">Card Defender</div>
+        
+        <div className="nav-left">
+          <img src="/carddefender.png" alt="card defender logo" />
+          Card Defender
+        </div>
       </Link>
       
       {/* Hamburger Menu Button */}
@@ -34,6 +38,9 @@ const Navbar = () => {
         <Link to="/home" className="nav-link" onClick={closeMenu}>Prediction</Link>
         <Link to="/about" className="nav-link" onClick={closeMenu}>Analytics</Link>
         <Link to="/contact" className="nav-link" onClick={closeMenu}>Review</Link>
+        <Link to="/login" className="nav-link-button" onClick={closeMenu}>
+          <button>Login</button>
+        </Link>
       </div>
     </nav>
   );

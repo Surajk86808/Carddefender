@@ -18,7 +18,7 @@ import Careers from './components/footer/careers/Careers';
 import NewsPress from './components/footer/newpress/NewsPress';
 import ContactSupport from './components/footer/contactlayout/ContactSupport';
 import Documentation from './components/footer/documentation/Documentation';
-import FAQs from './components/faqs/FAQs';
+import FAQs from './components/footer/faqs/FAQs';
 
 const App = () => {
   const router = createBrowserRouter(
