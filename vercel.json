@@ -1,3 +1,9 @@
 {
-  "rootDirectory": "card"
+  "rootDirectory": "card",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
