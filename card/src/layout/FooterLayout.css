@@ -92,13 +92,19 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .footer-top {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+
+    /* Reduce space between rows */
+    .footer-column {
+        margin-bottom: 10px;
+        /* previously 20px */
     }
 
-    .footer-column {
-        margin-bottom: 20px;
+    /* Increase font size for better readability on small screens */
+    .footer-column h4 {
+        font-size: 18px;
+    }
+
+    .footer-column a {
+        font-size: 16px;
     }
 }

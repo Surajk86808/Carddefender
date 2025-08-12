@@ -67,3 +67,16 @@ html::-webkit-scrollbar {
   }
 }
 
+/* Global responsive media */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Utility class for responsive images if needed */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+

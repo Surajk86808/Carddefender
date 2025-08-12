@@ -17,7 +17,7 @@
     border-radius: 20px;
     padding: 2.5rem;
     box-shadow: 0 0 30px rgba(132, 0, 255, 0.6);
-    backdrop-filter: blur(10px);
+     
     animation: fadeInUp 1s ease-out;
 }
 

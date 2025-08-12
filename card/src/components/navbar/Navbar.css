@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     background: rgba(13, 13, 13);
@@ -14,7 +14,10 @@
 }
 
 .nav-left {
-    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: clamp(1.25rem, 2.5vw, 2rem);
     font-weight: bold;
     color: white;
 }
@@ -66,6 +69,8 @@
 
 .nav-logo{
    text-decoration: none;
+   display: flex;
+   align-items: center;
 }
 
 /* Hamburger Menu Styles */
@@ -100,11 +105,12 @@
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-img{
-    width: 40px;
-    height: 35px;
+.nav-left img{
+    width: clamp(28px, 4vw, 42px);
+    height: clamp(28px, 4vw, 42px);
     margin-right: 10px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .nav-link-button button {
@@ -203,4 +209,19 @@ img{
         width: 20px;
         height: 2px;
     }
+}
+
+/* Large screens: slightly increase spacing and sizing */
+@media screen and (min-width: 1280px) {
+    .navbar { padding: 18px 56px; }
+    .nav-right { gap: 28px; }
+    .nav-link { font-size: 1rem; }
+    .nav-link-button button { font-size: 1.05rem; padding: 10px 24px; }
+}
+
+/* Extra small phones */
+@media screen and (max-width: 360px) {
+    .navbar { padding: 10px 12px; }
+    .nav-left { font-size: 0.95rem; gap: 6px; }
+    .nav-left img { width: 28px; height: 28px; }
 }
